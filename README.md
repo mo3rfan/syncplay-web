@@ -13,7 +13,6 @@ Talks with [syncplay](http://syncplay.pl) server running on TCP/IP using a WebSo
 
 ## Compiling manually
 
-1. `npm install` to install [flow](https://flowtype.org/)
+1. `npm install` to install devDependencies like [flow](https://flowtype.org/), babel etc
 2. `npm run-script flow` to check for type errors. (src/syncplay.js)
-3. `npm install -g babel-cli` to install the Babel compiler cli
-4. `BABEL_ENV=prod babel --watch=./src --out-dir=./build` to generate js file in build folder (replace "prod" with "dev" for retaining console.log messages etc)
+3. `BABEL_ENV=prod babel --watch=./src --out-dir=./build` to generate js file in build folder (replace the env var "prod" with "dev" for retaining console.log messages etc)
