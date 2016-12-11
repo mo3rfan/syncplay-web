@@ -1,0 +1,10 @@
+{
+    "env": {
+        "dev": {
+            "plugins": ["transform-flow-strip-types"]
+        },
+        "prod": {
+            "plugins": ["transform-flow-strip-types", "transform-remove-console"]
+        }
+    }
+}

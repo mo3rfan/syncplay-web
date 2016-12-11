@@ -1,0 +1,10 @@
+{
+  "name": "SyncPlay-js-client",
+  "version": "0.0.1",
+  "scripts": {
+    "flow": "flow; test $? -eq 0 -o $? -eq 2"
+  },
+  "devDependencies": {
+    "flow-bin": "^0.36.0"
+  }
+}
