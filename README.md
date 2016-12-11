@@ -1,4 +1,4 @@
-# SyncPlay-js-client
+# SyncPlay-js-client [![Build Status](https://drone.io/github.com/PowerInside/syncplay-web/status.png)](https://drone.io/github.com/PowerInside/syncplay-web/latest)
 
 Web port of the [syncplay protocol](http://syncplay.pl/about/protocol/).
 
@@ -13,6 +13,6 @@ Talks with [syncplay](http://syncplay.pl) server running on TCP/IP using a WebSo
 
 ## Compiling manually
 
-1. `npm install` to install devDependencies like [flow](https://flowtype.org/), babel etc
+1. `npm install` to install devDependencies like [flow](https://flowtype.org/), babel plugins etc
 2. `npm run-script flow` to check for type errors. (src/syncplay.js)
 3. `BABEL_ENV=prod babel --watch=./src --out-dir=./build` to generate js file in build folder (replace the env var "prod" with "dev" for retaining console.log messages etc)
