@@ -1,5 +1,7 @@
 # SyncPlay-js-client [![Build Status](https://drone.io/github.com/PowerInside/syncplay-web/status.png)](https://drone.io/github.com/PowerInside/syncplay-web/latest)
 
+[![Join the chat at https://gitter.im/PowerInside/syncplay-web](https://badges.gitter.im/PowerInside/syncplay-web.svg)](https://gitter.im/PowerInside/syncplay-web?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Web port of the [syncplay protocol](http://syncplay.pl/about/protocol/).
 
 Talks with [syncplay](http://syncplay.pl) server running on TCP/IP using a WebSockets bridge.
