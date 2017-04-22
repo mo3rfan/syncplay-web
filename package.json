@@ -1,13 +1,25 @@
 {
   "name": "SyncPlay-js-client",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "scripts": {
-    "flow": "flow; test $? -eq 0 -o $? -eq 2"
+    "flow": "flow; test $? -eq 0 -o $? -eq 2",
+    "start": "webpack"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
+    "babel-loader": "^7.0.0",
     "babel-plugin-transform-flow-strip-types": "^6.18.0",
     "babel-plugin-transform-remove-console": "^6.8.0",
-    "flow-bin": "^0.36.0"
-  }
+    "babel-preset-env": "^1.4.0",
+    "flow-bin": "^0.36.0",
+    "webpack": "^2.4.1"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.23.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/powerinside/syncplay-web.git"
+  },
+  "license": "Apache-2.0"
 }
