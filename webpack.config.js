@@ -22,7 +22,9 @@ const config = {
               },
               "production": {
                 "plugins": ["transform-flow-strip-types", "transform-remove-console"],
-                "presets": ['env']
+                "presets": ['babili'],
+                "minified": true,
+                "comments": false
               }
             }
           }
