@@ -362,3 +362,5 @@ if (Util.Engine.webkit) {
             return parseFloat(v, 10);
         })(Util.Engine.webkit);
 }
+
+export default Util;

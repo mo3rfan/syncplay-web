@@ -18,7 +18,6 @@ import Util from "./util";
 /*jslint browser: true, bitwise: true */
 /*global Util*/
 
-[module] 
 export default function Websock() {
     "use strict";
 

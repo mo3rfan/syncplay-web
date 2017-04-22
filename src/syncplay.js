@@ -1,6 +1,8 @@
 // @flow
 
 'use strict';
+import Websock from './websock';
+
 var SyncPlay = function (initobj, onconnected, videonode) {
   var version = "1.3.4";
   var username: string;
@@ -41,11 +43,12 @@ var SyncPlay = function (initobj, onconnected, videonode) {
   init(initobj, onconnected, videonode);
 
   function establishWS(conncallback) {
-      socket = new WebSocket("ws://" + url, "base64");
-      socket.onopen = function (p) {
+      socket = new Websock();
+      socket.open("ws://" + url);
+      socket.on("open", p => {
           sendHello();
-      };
-      socket.onmessage = socketHandler;
+      });
+      socket.on("message", socketHandler);
   }
 
   function sendState(position, paused, doSeek, latencyCalculation, stateChange) {
@@ -86,9 +89,9 @@ var SyncPlay = function (initobj, onconnected, videonode) {
       send({"State": state});
   }
 
-  function socketHandler(d: MessageEvent) {
-      var large_payload: string = d.data.toString();
-      var split_payload = atob(large_payload).split("\r\n");
+  function socketHandler() {
+      var large_payload: string = socket.rQshiftStr();
+      var split_payload = large_payload.split("\r\n");
       for (var index = 0; index < split_payload.length; index += 1) {
           if (split_payload[index] == "") {
               break;
@@ -246,8 +249,8 @@ var SyncPlay = function (initobj, onconnected, videonode) {
 
   function send(message) {
     console.log("Client >> " + JSON.stringify(message));
-    message = btoa(JSON.stringify(message) + "\r\n");
-    socket.send(message);
+    message = JSON.stringify(message) + "\r\n";
+    socket.send_string(message);
   }
 
   function setGetters(fobj, second) {
@@ -285,3 +288,5 @@ var SyncPlay = function (initobj, onconnected, videonode) {
     seeked: seeked
   }
 };
+
+window.SyncPlay = SyncPlay;
