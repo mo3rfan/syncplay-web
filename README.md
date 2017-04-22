@@ -1,10 +1,11 @@
-# SyncPlay-js-client 
+# syncplay-web 
+[![wercker status](https://app.wercker.com/status/28a680866a256df3a4f591ae06f23a4c/m/ "wercker status")](https://app.wercker.com/project/byKey/28a680866a256df3a4f591ae06f23a4c)
 
 [![Join the chat at https://gitter.im/PowerInside/syncplay-web](https://badges.gitter.im/PowerInside/syncplay-web.svg)](https://gitter.im/PowerInside/syncplay-web?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-Web port of the [syncplay protocol](http://syncplay.pl/about/protocol/).
+Web port of the [syncplay protocol](http://syncplay.pl/about/protocol/). (Client side only)
 
-Talks with [syncplay](http://syncplay.pl) server running on TCP/IP using a WebSockets bridge.
+Talks with [syncplay](http://syncplay.pl) server running on TCP/IP using a [WebSockets bridge](https://github.com/kanaka/websockify).
 
 ## Quick start
 
