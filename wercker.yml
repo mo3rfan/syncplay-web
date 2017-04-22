@@ -14,4 +14,6 @@ build:
           echo "npm version $(npm -v) running"
         name: build production
         code: |
+          npm config set -g production false
+          npm install
           BABEL_ENV=production npm start
