@@ -15,8 +15,16 @@ const config = {
         use: {
           loader: 'babel-loader',
           options: {
-            plugins: ["transform-flow-strip-types", "transform-remove-console"],
-            presets: ['env']
+            "env": {
+              "development": {
+                "plugins": ["transform-flow-strip-types"],
+                "presets": ['env']
+              },
+              "production": {
+                "plugins": ["transform-flow-strip-types", "transform-remove-console"],
+                "presets": ['env']
+              }
+            }
           }
         }
       }
